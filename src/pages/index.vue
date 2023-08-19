@@ -20,31 +20,20 @@ onMounted(async() => {
 </script>
 
 <template>
-  <div>
-    <h5>{{ count }}</h5>
-    <button @click="count--">-</button>
-    <button @click="count = 0">reset</button>
-    <button @click="count++">+</button>
-  </div>
-  <Card />
+  <router-link to="/">Index</router-link>
+  <router-link to="/about">About</router-link>
+  <router-view></router-view>
   
-  <div v-for="product in products" :key="product.id">
+  
+  
+  <!-- <div v-for="product in products" :key="product.id">
     <h5>{{ product.product_name }}</h5>
-  </div>
+  </div> -->
 </template>
 
 <script>
-import Card from '../components/Card'
-
 export default {
-  name: 'App',
-  components: { Card },
-  data() {
-    return {
-      title: "HAI :)",
-      count: 0
-    }
-  }
+  name: 'App'
 }
 </script>
 
